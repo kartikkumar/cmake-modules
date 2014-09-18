@@ -8,13 +8,14 @@ else (SML_INCLUDE_DIRS)
 
   find_path(SML_INCLUDE_DIR
     NAMES
-      sml.hpp
+      signature_of_sml_library
     PATHS
       /usr/include
       /usr/local/include
       /opt/local/include
       /sw/include
-      ${PROJECT_ROOT}/SML
+      /usr/local
+      PATH_SUFFIXES sml
   )
 
   set(SML_INCLUDE_DIRS
