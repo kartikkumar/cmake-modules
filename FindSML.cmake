@@ -16,6 +16,7 @@ else (SML_INCLUDE_DIRS)
       /sw/include
       /usr/local
       ${PROJECT_ROOT}
+      ${PROJECT_ROOT}/..      
       PATH_SUFFIXES sml
   )
 
