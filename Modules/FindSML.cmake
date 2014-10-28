@@ -8,7 +8,7 @@ else (SML_INCLUDE_DIRS)
 
   find_path(SML_INCLUDE_DIR
     NAMES
-      signature_of_sml_library
+      sml_signature
     PATHS
       /usr/include
       /usr/local/include
