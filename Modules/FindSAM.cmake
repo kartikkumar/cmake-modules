@@ -8,7 +8,7 @@ else (SAM_INCLUDE_DIRS)
 
   find_path(SAM_INCLUDE_DIR
     NAMES
-      signature_of_sam_library
+      sam_signature
     PATHS
       /usr/include
       /usr/local/include
