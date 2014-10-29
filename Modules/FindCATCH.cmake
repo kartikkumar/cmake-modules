@@ -16,7 +16,11 @@ else (CATCH_INCLUDE_DIRS)
       /usr/local/include
       /opt/local/include
       /sw/include
-      ${PROJECT_PATH}/Catch/single_include
+      C:
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
+    PATH_SUFFIXES 
+      Catch/include Catch/src/include
   )
 
   set(CATCH_INCLUDE_DIRS

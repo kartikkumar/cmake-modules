@@ -1,16 +1,29 @@
-cmake-modules
+CMake-modules
 ===
 
 A collection of `CMake` modules for a variety of C++ libraries.
 
+Features
+------
+
+This repository provides `CMake` modules for the following libraries:
+
+  - 
+
 Requirements
 ------
+
+This project requires the following:
+
+  - [Git](http://git-scm.com)
+  - [CMake](http://www.cmake.org)  
 
 Installation
 ------
 
-Documentation
--------------
+Run the following commands to download this project.
+
+    git clone https://www.github.com/kartikkumar/cmake-modules cmake
 
 Contributing
 ------------
@@ -26,7 +39,7 @@ Once you've made your great commits:
 License
 ------
 
-See `LICENSE`.
+See `LICENSE.md`.
 
 Disclaimer
 ------
@@ -37,3 +50,8 @@ Contact
 ------
 
 Shoot an [email](mailto:me@kartikkumar.com?subject=cmake-modules) if you have any questions.
+
+TODO
+------
+
+ - Figure out way to write tests for CMake modules

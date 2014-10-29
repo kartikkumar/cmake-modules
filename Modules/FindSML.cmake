@@ -1,5 +1,6 @@
 # Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
-# All rights reserved.
+# Distributed under the MIT License.
+# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
 if (SML_INCLUDE_DIRS)
   # in cache already
@@ -8,7 +9,7 @@ else (SML_INCLUDE_DIRS)
 
   find_path(SML_INCLUDE_DIR
     NAMES
-      sml_signature
+      signature_sml
     PATHS
       /usr/include
       /usr/local/include
@@ -16,8 +17,9 @@ else (SML_INCLUDE_DIRS)
       /sw/include
       /usr/local
       ${PROJECT_ROOT}
-      ${PROJECT_ROOT}/..      
-      PATH_SUFFIXES sml
+      ${PROJECT_ROOT}/..  
+      ${EXTERNAL_PATH}          
+      PATH_SUFFIXES sml sml/include sml/src/include
   )
 
   set(SML_INCLUDE_DIRS
