@@ -7,7 +7,7 @@ if (CPP_PROJECT_INCLUDE_DIRS)
   set(CPP_PROJECT_FOUND TRUE)
 else (CPP_PROJECT_INCLUDE_DIRS)
 
-  find_path(CPP_PROJECT_INCLUDE_DIR
+  find_path(CPP_PROJECT_SEARCH_DIR
     NAMES
       cppProject.hpp
     PATHS
@@ -18,8 +18,11 @@ else (CPP_PROJECT_INCLUDE_DIRS)
     PATH_SUFFIXES
   )
 
+  set(CPP_PROJECT_INCLUDE_DIR
+      ${CPP_PROJECT_SEARCH_DIR}/..)
+
   set(CPP_PROJECT_INCLUDE_DIRS
-    ${CPP_PROJECT_INCLUDE_DIR}
+      ${CPP_PROJECT_INCLUDE_DIR}
   )
 
   include(FindPackageHandleStandardArgs)

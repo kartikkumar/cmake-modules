@@ -6,22 +6,27 @@ if (SAM_INCLUDE_DIRS)
   set(SAM_FOUND TRUE)
 else (SAM_INCLUDE_DIRS)
 
-  find_path(SAM_INCLUDE_DIR
+  find_path(SAM_SEARCH_DIR
     NAMES
-      sam_signature
+      sam.hpp
     PATHS
       /usr/include
       /usr/local/include
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_ROOT}
-      ${PROJECT_ROOT}/..      
-      PATH_SUFFIXES sam
+      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
+      ${EXTERNAL_PATH}
+    PATH_SUFFIXES
+      SAM sam/include/SAM SAM/src/sam/include/SAM
   )
 
+  set(SAM_INCLUDE_DIR
+      ${SAM_SEARCH_DIR}/..)
+
   set(SAM_INCLUDE_DIRS
-    ${SAM_INCLUDE_DIR}
+      ${SAM_INCLUDE_DIR}
   )
 
   include(FindPackageHandleStandardArgs)

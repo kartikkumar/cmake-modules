@@ -7,7 +7,7 @@ if (SML_INCLUDE_DIRS)
   set(SML_FOUND TRUE)
 else (SML_INCLUDE_DIRS)
 
-  find_path(SML_INCLUDE_DIR
+  find_path(SML_SEARCH_DIR
     NAMES
       sml.hpp
     PATHS
@@ -22,8 +22,11 @@ else (SML_INCLUDE_DIRS)
       PATH_SUFFIXES SML sml/include/SML SML/src/sml/include/SML
   )
 
+  set(SML_INCLUDE_DIR
+      ${SML_SEARCH_DIR}/..)
+
   set(SML_INCLUDE_DIRS
-    ${SML_INCLUDE_DIR}
+      ${SML_INCLUDE_DIR}
   )
 
   include(FindPackageHandleStandardArgs)
