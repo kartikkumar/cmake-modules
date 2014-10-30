@@ -2,10 +2,10 @@
 # Distributed under the MIT License.
 # See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
-if (SAM_INCLUDE_DIRS)
+if(SAM_INCLUDE_DIRS)
   # in cache already
   set(SAM_FOUND TRUE)
-else (SAM_INCLUDE_DIRS)
+else(SAM_INCLUDE_DIRS)
 
   find_path(SAM_INCLUDE_DIR
     NAMES
@@ -34,4 +34,4 @@ else (SAM_INCLUDE_DIRS)
   # show the SAM_INCLUDE_DIRS variables only in the advanced view
   mark_as_advanced(SAM_INCLUDE_DIRS)
 
-endif (SAM_INCLUDE_DIRS)
+endif(SAM_INCLUDE_DIRS)
