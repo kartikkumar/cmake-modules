@@ -2,14 +2,12 @@
 # Distributed under the MIT License.
 # See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
-set(SML_FOUND FALSE)
-
 if (SML_INCLUDE_DIRS)
   # in cache already
   set(SML_FOUND TRUE)
 else (SML_INCLUDE_DIRS)
 
-  find_path(SML_SEARCH_DIR
+  find_path(SML_INCLUDE_DIR
     NAMES
       sml.hpp
     PATHS
@@ -21,14 +19,12 @@ else (SML_INCLUDE_DIRS)
       ${PROJECT_PATH}
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
-      PATH_SUFFIXES SML sml/include/SML SML/src/sml/include/SML
+    PATH_SUFFIXES 
+      SML sml/include/SML SML/src/sml/include/SML
   )
 
-  set(SML_INCLUDE_DIR
-      ${SML_SEARCH_DIR}/..)
-
   set(SML_INCLUDE_DIRS
-      ${SML_INCLUDE_DIR}
+      ${SML_INCLUDE_DIR}/..
   )
 
   include(FindPackageHandleStandardArgs)

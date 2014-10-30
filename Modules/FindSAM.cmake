@@ -1,14 +1,12 @@
 # Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
 # All rights reserved.
 
-set(SML_FOUND FALSE)
-
 if (SAM_INCLUDE_DIRS)
   # in cache already
   set(SAM_FOUND TRUE)
 else (SAM_INCLUDE_DIRS)
 
-  find_path(SAM_SEARCH_DIR
+  find_path(SAM_INCLUDE_DIR
     NAMES
       sam.hpp
     PATHS
@@ -24,11 +22,8 @@ else (SAM_INCLUDE_DIRS)
       SAM sam/include/SAM SAM/src/sam/include/SAM
   )
 
-  set(SAM_INCLUDE_DIR
-      ${SAM_SEARCH_DIR}/..)
-
   set(SAM_INCLUDE_DIRS
-      ${SAM_INCLUDE_DIR}
+      ${SAM_INCLUDE_DIR}/..
   )
 
   include(FindPackageHandleStandardArgs)
