@@ -9,7 +9,7 @@ else (SML_INCLUDE_DIRS)
 
   find_path(SML_INCLUDE_DIR
     NAMES
-      signature_sml
+      sml.hpp
     PATHS
       /usr/include
       /usr/local/include
@@ -19,7 +19,7 @@ else (SML_INCLUDE_DIRS)
       ${PROJECT_PATH}
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
-      PATH_SUFFIXES SML SML/src/sml/include
+      PATH_SUFFIXES SML sml/include/SML SML/src/sml/include/SML
   )
 
   set(SML_INCLUDE_DIRS
