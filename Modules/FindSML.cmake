@@ -16,10 +16,10 @@ else(SML_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
-      ${EXTERNAL_PATH}
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
     PATH_SUFFIXES 
-      sml/include/SML SML/src/sml/include/SML
+      SML sml/include/SML SML/src/sml/include/SML
   )
 
   if(SML_INCLUDE_DIR)
