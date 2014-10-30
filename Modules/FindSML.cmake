@@ -2,6 +2,8 @@
 # Distributed under the MIT License.
 # See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
+set(SML_FOUND FALSE)
+
 if (SML_INCLUDE_DIRS)
   # in cache already
   set(SML_FOUND TRUE)

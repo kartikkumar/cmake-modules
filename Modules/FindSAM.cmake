@@ -1,6 +1,8 @@
 # Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
 # All rights reserved.
 
+set(SML_FOUND FALSE)
+
 if (SAM_INCLUDE_DIRS)
   # in cache already
   set(SAM_FOUND TRUE)
