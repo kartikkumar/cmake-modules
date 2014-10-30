@@ -15,15 +15,17 @@ else (CPP_PROJECT_INCLUDE_DIRS)
       /usr/local/include
       /opt/local/include
       /sw/include
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
     PATH_SUFFIXES
+      CppProject include/CppProject
   )
 
-  set(CPP_PROJECT_INCLUDE_DIR
-      ${CPP_PROJECT_SEARCH_DIR}/..)
-
-  set(CPP_PROJECT_INCLUDE_DIRS
-      ${CPP_PROJECT_INCLUDE_DIR}
-  )
+  if(CPP_PROJECT_INCLUDE_DIR)
+    set(CPP_PROJECT_INCLUDE_DIRS
+      ${CPP_PROJECT_INCLUDE_DIR}/..
+    )
+  endif(CPP_PROJECT_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(CATCH DEFAULT_MSG CPP_PROJECT_INCLUDE_DIRS)
