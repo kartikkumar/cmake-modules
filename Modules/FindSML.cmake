@@ -22,9 +22,11 @@ else(SML_INCLUDE_DIRS)
       sml/include/SML SML/src/sml/include/SML
   )
 
-  set(SML_INCLUDE_DIRS
-      ${SML_INCLUDE_DIR}/..
-  )
+  if(SML_INCLUDE_DIR)
+    set(SML_INCLUDE_DIRS
+        ${SML_INCLUDE_DIR}/..
+    )
+  endif(SML_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(SML DEFAULT_MSG SML_INCLUDE_DIRS)
