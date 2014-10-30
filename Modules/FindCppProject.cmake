@@ -9,7 +9,7 @@ else (CPP_PROJECT_INCLUDE_DIRS)
 
   find_path(CPP_PROJECT_INCLUDE_DIR
     NAMES
-      signature_CppProject
+      cppProject.hpp
     PATHS
       /usr/include
       /usr/local/include
