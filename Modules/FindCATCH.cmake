@@ -19,8 +19,8 @@ else (CATCH_INCLUDE_DIRS)
       C:
       ${PROJECT_PATH}
       ${EXTERNAL_PATH}
-    PATH_SUFFIXES 
-      Catch/include Catch/src/include
+    PATH_SUFFIXES
+      Catch/include Catch/src/catch/include
   )
 
   set(CATCH_INCLUDE_DIRS
