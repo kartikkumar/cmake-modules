@@ -1,5 +1,6 @@
 # Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
-# All rights reserved.
+# Distributed under the MIT License.
+# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
 if (SAM_INCLUDE_DIRS)
   # in cache already
@@ -16,15 +17,16 @@ else (SAM_INCLUDE_DIRS)
       /sw/include
       /usr/local
       ${PROJECT_PATH}
-      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      SAM sam/include/SAM SAM/src/sam/include/SAM
+      sam/include/SAM SAM/src/sam/include/SAM
   )
 
-  set(SAM_INCLUDE_DIRS
-      ${SAM_INCLUDE_DIR}/..
-  )
+  if(SAM_INCLUDE_DIR)
+    set(SAM_INCLUDE_DIRS
+        ${SAM_INCLUDE_DIR}/..
+    )
+  endif(SAM_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(SAM DEFAULT_MSG SAM_INCLUDE_DIRS)
