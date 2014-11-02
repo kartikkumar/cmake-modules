@@ -1,6 +1,6 @@
 # Copyright (c) <year>, <author> (<email>)
 # Distributed under the MIT License.
-# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
+# See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
 
 if (CPP_PROJECT_INCLUDE_DIRS)
   # in cache already
