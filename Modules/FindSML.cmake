@@ -1,6 +1,6 @@
 # Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
 # Distributed under the MIT License.
-# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
+# See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
 
 if(SML_INCLUDE_DIRS)
   # in cache already
@@ -19,7 +19,7 @@ else(SML_INCLUDE_DIRS)
       ${PROJECT_PATH}
       ${EXTERNAL_PATH}
     PATH_SUFFIXES 
-      sml/include/SML SML/src/sml/include/SML
+      SML include/SML sml/include/SML SML/src/sml/include/SML
   )
 
   if(SML_INCLUDE_DIR)

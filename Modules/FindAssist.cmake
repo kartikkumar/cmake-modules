@@ -1,7 +1,7 @@
- #    Copyright (c) 2010-2014, Delft University of Technology
- #    Copyright (c) 2010-2014, K. Kumar (me@kartikkumar.com)
- #    All rights reserved.
- #    See http://bit.ly/1jern3m for license details.
+# Copyright (c) 2010-2014, Delft University of Technology
+# Copyright (c) 2010-2014, K. Kumar (me@kartikkumar.com)
+# All rights reserved.
+# See http://bit.ly/1jern3m for license details.
 
 macro(_assist_check_version)
   message(STATUS "Checking for Assist in: " ${ASSIST_BASE_PATH})  
@@ -61,22 +61,22 @@ else (ASSIST_BASE_PATH)
 
 endif(ASSIST_BASE_PATH)
 
- #    References
- #      FindEigen3.cmake.
- #
- #    This script tries to find the Assist library. This module supports requiring a minimum 
- #    version, e.g. you can do version, e.g. you can do find_package(Assist 3.1.2) to require i
- #    version 3.1.2 or newer of Assist.
- #
- #    Once done, this will define:
- #
- #        ASSIST_FOUND - system has Assist lib with correct version;
- #        ASSIST_INCLUDE_DIR - the Assist include directory.
- #
- #    Original copyright statements (from FindEigen3.cmake:
- #        Copyright (c) 2006, 2007 Montel Laurent, <montel@kde.org>
- #        Copyright (c) 2008, 2009 Gael Guennebaud, <g.gael@free.fr>
- #        Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmail.com>
- #
- #    FindEigen3.cmake states that redistribution and use is allowed according to the terms of
- #    the 2-clause BSD license.
+# References
+#   FindEigen3.cmake.
+#
+# This script tries to find the Assist library. This module supports requiring a minimum 
+# version, e.g. you can do version, e.g. you can do find_package(Assist 3.1.2) to require i
+# version 3.1.2 or newer of Assist.
+#
+# Once done, this will define:
+#
+#     ASSIST_FOUND - system has Assist lib with correct version;
+#     ASSIST_INCLUDE_DIR - the Assist include directory.
+#
+# Original copyright statements (from FindEigen3.cmake:
+#     Copyright (c) 2006, 2007 Montel Laurent, <montel@kde.org>
+#     Copyright (c) 2008, 2009 Gael Guennebaud, <g.gael@free.fr>
+#     Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmail.com>
+#
+# FindEigen3.cmake states that redistribution and use is allowed according to the terms of
+# the 2-clause BSD license.
