@@ -16,10 +16,10 @@ else(SAM_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
-      ${EXTERNAL_PATH}
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
     PATH_SUFFIXES
-      SAM include/SAM sam/include/SAM SAM/src/sam/include/SAM
+      SAM sam/include/SAM SAM/src/sam/include/SAM
   )
 
   if(SAM_INCLUDE_DIR)
