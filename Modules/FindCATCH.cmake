@@ -17,10 +17,10 @@ else (CATCH_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       C:
-      ${PROJECT_PATH}
-      ${EXTERNAL_PATH}
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
     PATH_SUFFIXES
-      Catch/include Catch/src/catch/include
+      Catch Catch/include Catch/src/catch/include
   )
 
   set(CATCH_INCLUDE_DIRS
