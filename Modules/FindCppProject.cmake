@@ -2,12 +2,12 @@
 # Distributed under the MIT License.
 # See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
 
-if(CPP_PROJECT_INCLUDE_DIRS)
+if(CPPPROJECT_INCLUDE_DIRS)
   # in cache already
-  set(CPP_PROJECT_FOUND TRUE)
-else(CPP_PROJECT_INCLUDE_DIRS)
+  set(CPPPROJECT_FOUND TRUE)
+else(CPPPROJECT_INCLUDE_DIRS)
 
-  find_path(CPP_PROJECT_INCLUDE_DIR
+  find_path(CPPPROJECT_INCLUDE_DIR
     NAMES
       cppProject.hpp
     PATHS
@@ -21,16 +21,16 @@ else(CPP_PROJECT_INCLUDE_DIRS)
       CppProject include/CppProject
   )
 
-  if(CPP_PROJECT_INCLUDE_DIR)
-    set(CPP_PROJECT_INCLUDE_DIRS
-      ${CPP_PROJECT_INCLUDE_DIR}/..
+  if(CPPPROJECT_INCLUDE_DIR)
+    set(CPPPROJECT_INCLUDE_DIRS
+      ${CPPPROJECT_INCLUDE_DIR}/..
     )
-  endif(CPP_PROJECT_INCLUDE_DIR)
+  endif(CPPPROJECT_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(CppProject DEFAULT_MSG CPP_PROJECT_INCLUDE_DIRS)
+  find_package_handle_standard_args(CppProject DEFAULT_MSG CPPPROJECT_INCLUDE_DIRS)
 
-  # show the CPP_PROJECT_INCLUDE_DIRS variables only in the advanced view
-  mark_as_advanced(CPP_PROJECT_INCLUDE_DIRS)
+  # show the CPPPROJECT_INCLUDE_DIRS variables only in the advanced view
+  mark_as_advanced(CPPPROJECT_INCLUDE_DIRS)
 
-endif(CPP_PROJECT_INCLUDE_DIRS)
+endif(CPPPROJECT_INCLUDE_DIRS)

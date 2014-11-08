@@ -6,7 +6,7 @@ if (SGP4_INCLUDE_DIRS)
   set(SGP4_FOUND TRUE)
 else (SGP4_INCLUDE_DIRS)
 
-  find_path(SGP4_BASE_DIR
+  find_path(SGP4_INCLUDE_DIR
     NAMES
       SGP4-VER.TLE
     PATHS
@@ -15,16 +15,35 @@ else (SGP4_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_ROOT}
-      ${PROJECT_ROOT}/..      
-      PATH_SUFFIXES sgp4
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
+    PATH_SUFFIXES
+      sgp4 sgp4deorbit
   )
 
-  set(SGP4_INCLUDE_DIRS ${SGP4_BASE_DIR})
-  set(SGP4_LIBRARY_DIR ${SGP4_BASE_DIR}/libsgp4)
-  set(SGP4_LIBRARY "sgp4")  
+  find_library(SGP4_LIBRARY_PATH
+    NAMES
+      sgp4
+    PATHS
+      /usr/include
+      /usr/local/include
+      /opt/local/include
+      /sw/include
+      /usr/local
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
+    PATH_SUFFIXES
+      sgp4/libsgp4 sgp4/build sgp4deorbit/libsgp4 sgp4deorbit/build
+    NO_DEFAULT_PATH
+  )
 
-  link_directories(${SGP4_LIBRARY_DIR})  
+  if(SGP4_INCLUDE_DIR AND SGP4_LIBRARY_PATH)
+    set(SGP4_INCLUDE_DIRS
+      ${SGP4_INCLUDE_DIR}
+    )
+    get_filename_component(SGP4_LIBRARY_DIR ${SGP4_LIBRARY_PATH} DIRECTORY)
+    set(SGP4_LIBRARY "sgp4")
+  endif(SGP4_INCLUDE_DIR AND SGP4_LIBRARY_PATH)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(SGP4 DEFAULT_MSG SGP4_INCLUDE_DIRS)

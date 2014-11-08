@@ -16,10 +16,10 @@ else(ATOM_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
-      ${EXTERNAL_PATH}
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
     PATH_SUFFIXES
-      Atom include/Atom atom/include/Atom Atom/src/atom/include/Atom
+      Atom atom/include/Atom Atom/src/atom/include/Atom
   )
 
   if(ATOM_INCLUDE_DIR)
