@@ -8,9 +8,9 @@
 # or copy at http://opensource.org/licenses/MIT)
 
 macro(_sqlitecpp_check_version)
-  file(READ "${SQLITECPP_INCLUDE_DIR}/SQLiteCpp/SQLiteCpp.h" _sqlitecpp_header)
+  file(READ "${SQLITECPP_INCLUDE_DIR}/SQLiteCpp.h" _sqlitecpp_header)
 
-  string(REGEX MATCH "define[ \t]+SQLITECPP_VERSION_NUMBER[ \t]+([0-9]+)" 
+  string(REGEX MATCH "define[ \t]+SQLITECPP_VERSION_NUMBER[ \t]+([0-9]+)"
          _sqlitecpp_version_match "${_sqlitecpp_header}")
   set(SQLITECPP_VERSION "${CMAKE_MATCH_1}")
   if(${SQLITECPP_VERSION} VERSION_LESS ${SQLiteCpp_FIND_VERSION})
@@ -28,31 +28,58 @@ macro(_sqlitecpp_check_version)
   link_directories(${SQLITECPP_LIBRARY_DIR})
 endmacro(_sqlitecpp_check_version)
 
-if(SQLITECPP_INCLUDE_DIR)
+if(SQLITECPP_INCLUDE_DIRS)
+
   # Check if SQLiteCpp is already present in cache.
   _sqlitecpp_check_version()
-  set(SQLITECPP_FOUND ${SQLITECPP_VERSION_OK})
+  set(SQLITECPP_FOUND
+    ${SQLITECPP_VERSION_OK})
 
-else (SQLITECPP_INCLUDE_DIR)
-  find_path(SQLITECPP_BASE_PATH NAMES SQLiteCpp.h
-      PATHS
-      ${PROJECT_SOURCE_DIR}
-      ${PROJECT_SOURCE_DIR}/..
-      ${PROJECT_SOURCE_DIR}/../..
-      ${PROJECT_SOURCE_DIR}/../../..
-      ${PROJECT_SOURCE_DIR}/../../../..      
-      PATH_SUFFIXES SQLiteCpp/include/SQLiteCpp
+else(SQLITECPP_INCLUDE_DIRS)
+
+  find_path(SQLITECPP_INCLUDE_DIR
+    NAMES
+      SQLiteCpp.h
+    PATHS
+      /usr/include
+      /usr/local/include
+      /opt/local/include
+      /sw/include
+      /usr/local
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
+    PATH_SUFFIXES
+      SQLiteCpp SQLiteCpp/include/SQLiteCpp SQLiteCpp/src/sqlitecpp/include/SQLiteCpp
     )
-  set(SQLITECPP_INCLUDE_DIR ${SQLITECPP_BASE_PATH}/..)
-  set(SQLITECPP_LIBRARY_DIR ${SQLITECPP_BASE_PATH}/../../build)
 
-  if(SQLITECPP_INCLUDE_DIR)
+  find_library(SQLITECPP_LIBRARY_PATH
+    NAMES
+      SQLiteCpp
+    PATHS
+      /usr/include
+      /usr/local/include
+      /opt/local/include
+      /sw/include
+      /usr/local
+      ${MYPROJ_PATH}
+      ${MYEXT_PATH}
+    PATH_SUFFIXES
+      SQLiteCpp SQLiteCpp/build SQLiteCpp/src/sqlitecpp/build
+    NO_DEFAULT_PATH
+  )
+
+  if(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIBRARY_PATH)
+    set(SQLITECPP_INCLUDE_DIRS
+      ${SQLITECPP_INCLUDE_DIR}/..)
     _sqlitecpp_check_version()
-  endif(SQLITECPP_INCLUDE_DIR)
+    get_filename_component(SQLITECPP_LIBRARY_DIR ${SQLITECPP_LIBRARY_PATH} DIRECTORY)
+    set(SQLITECPP_LIBRARY "SQLiteCpp")
+  endif(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIBRARY_PATH)
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(SQLITECPP DEFAULT_MSG SQLITECPP_INCLUDE_DIR SQLITECPP_VERSION_OK)
+  find_package_handle_standard_args(
+    SQLITECPP DEFAULT_MSG SQLITECPP_INCLUDE_DIR SQLITECPP_VERSION_OK)
 
-  mark_as_advanced(SQLITECPP_INCLUDE_DIR SQLITECPP_LIBRARY)
+  mark_as_advanced(SQLITECPP_INCLUDE_DIRS SQLITECPP_LIBRARY)
 
-endif(SQLITECPP_INCLUDE_DIR)
+endif(SQLITECPP_INCLUDE_DIRS)
