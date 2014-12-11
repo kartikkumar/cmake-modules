@@ -16,9 +16,9 @@ else(SML_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
-    PATH_SUFFIXES 
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
+    PATH_SUFFIXES
       SML sml/include/SML SML/src/sml/include/SML
   )
 

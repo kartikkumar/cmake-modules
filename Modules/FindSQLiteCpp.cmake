@@ -46,13 +46,13 @@ else(SQLITECPP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       SQLiteCpp SQLiteCpp/include/SQLiteCpp SQLiteCpp/src/sqlitecpp/include/SQLiteCpp
     )
 
-  find_library(SQLITECPP_LIBRARY_PATH
+  find_library(SQLITECPP_LIB_PATH
     NAMES
       SQLiteCpp
     PATHS
@@ -61,20 +61,20 @@ else(SQLITECPP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       SQLiteCpp SQLiteCpp/build SQLiteCpp/src/sqlitecpp/build
     NO_DEFAULT_PATH
   )
 
-  if(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIBRARY_PATH)
+  if(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIB_PATH)
     set(SQLITECPP_INCLUDE_DIRS
       ${SQLITECPP_INCLUDE_DIR}/..)
     _sqlitecpp_check_version()
-    get_filename_component(SQLITECPP_LIBRARY_DIR ${SQLITECPP_LIBRARY_PATH} DIRECTORY)
+    get_filename_component(SQLITECPP_LIBRARY_DIR ${SQLITECPP_LIB_PATH} DIRECTORY)
     set(SQLITECPP_LIBRARY "SQLiteCpp")
-  endif(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIBRARY_PATH)
+  endif(SQLITECPP_INCLUDE_DIR AND SQLITECPP_LIB_PATH)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(

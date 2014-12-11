@@ -16,8 +16,8 @@ else(ATOM_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       Atom atom/include/Atom Atom/src/atom/include/Atom
   )

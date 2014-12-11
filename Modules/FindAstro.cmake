@@ -16,8 +16,8 @@ else(ASTRO_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       Astro astro/include/Astro Astro/src/astro/include/Astro
   )
