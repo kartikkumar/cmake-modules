@@ -36,6 +36,12 @@
 #    make
 #    make my_coverage_target
 #
+# 5. Extract specific files/directories.
+#    Example:
+#    set(COVERAGE_EXTRACT
+#      'CMAKE_CURRENT_SOURCE_DIR/include/*'
+#      'CMAKE_CURRENT_SOURCE_DIR/src/*'
+#      'CMAKE_CURRENT_SOURCE_DIR/tests/*')
 #
 
 # Check prereqs
@@ -113,7 +119,7 @@ FUNCTION(SETUP_TARGET_FOR_COVERAGE _targetname _testrunner _outputname)
 
         # Capturing lcov counters and generating report
         COMMAND ${LCOV_PATH} --directory . --capture --output-file ${_outputname}.info.complete
-        COMMAND ${LCOV_PATH} --extract ${_outputname}.info.complete '${MYPROJ_PATH}/*' --output-file ${_outputname}.info
+        COMMAND ${LCOV_PATH} --extract ${_outputname}.info.complete ${COVERAGE_EXTRACT} --output-file ${_outputname}.info
         COMMAND ${GENHTML_PATH} -o ${_outputname} ${_outputname}.info
         COMMAND ${CMAKE_COMMAND} -E remove ${_outputname}.info.complete
 
