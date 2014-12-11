@@ -39,9 +39,10 @@
 # 5. Extract specific files/directories.
 #    Example:
 #    set(COVERAGE_EXTRACT
-#      'CMAKE_CURRENT_SOURCE_DIR/include/*'
-#      'CMAKE_CURRENT_SOURCE_DIR/src/*'
-#      'CMAKE_CURRENT_SOURCE_DIR/tests/*')
+#      '${CMAKE_CURRENT_SOURCE_DIR}/include/*'
+#      '${CMAKE_CURRENT_SOURCE_DIR}/src/*'
+#      '${CMAKE_CURRENT_SOURCE_DIR}/tests/*'
+#    )
 #
 
 # Check prereqs
