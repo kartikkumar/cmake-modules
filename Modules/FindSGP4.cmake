@@ -21,7 +21,7 @@ else (SGP4_INCLUDE_DIRS)
       sgp4 sgp4deorbit
   )
 
-  find_library(SGP4_LIBRARY_PATH
+  find_library(SGP4_LIB_PATH
     NAMES
       sgp4
     PATHS
@@ -37,13 +37,13 @@ else (SGP4_INCLUDE_DIRS)
     NO_DEFAULT_PATH
   )
 
-  if(SGP4_INCLUDE_DIR AND SGP4_LIBRARY_PATH)
+  if(SGP4_INCLUDE_DIR AND SGP4_LIB_PATH)
     set(SGP4_INCLUDE_DIRS
       ${SGP4_INCLUDE_DIR}
     )
-    get_filename_component(SGP4_LIBRARY_DIR ${SGP4_LIBRARY_PATH} DIRECTORY)
+    get_filename_component(SGP4_LIBRARY_DIR ${SGP4_LIB_PATH} DIRECTORY)
     set(SGP4_LIBRARY "sgp4")
-  endif(SGP4_INCLUDE_DIR AND SGP4_LIBRARY_PATH)
+  endif(SGP4_INCLUDE_DIR AND SGP4_LIB_PATH)
 
   include(FindPackageHandleStandardArgs)
   find_package_handle_standard_args(SGP4 DEFAULT_MSG SGP4_INCLUDE_DIRS)

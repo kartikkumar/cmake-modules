@@ -57,8 +57,8 @@ find_path(
     /opt/local/include
     /sw/include
     /usr/local
-    ${MYPROJ_PATH}
-    ${MYEXT_PATH}
+    ${PROJECT_PATH}
+    ${EXTERNAL_PATH}
     ${RAPIDJSON_INCLUDEDIR}
   PATH_SUFFIXES
     rapidjson rapidjson/include RapidJSON/src/rapidjson/include
