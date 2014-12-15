@@ -16,8 +16,8 @@ else(KEPLERIANTOOLBOX_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       keplerian_toolbox keplerian_toolbox/src KeplerianToolbox/src/keplerian_toolbox/src pykep pykep/src PyKEP/src/pykep/src
   )
@@ -44,7 +44,7 @@ else(KEPLERIANTOOLBOX_INCLUDE_DIRS)
       ${KEPLERIANTOOLBOX_INCLUDE_DIR}
     )
     get_filename_component(KEPLERIANTOOLBOX_LIBRARY_DIR ${KEPLERIANTOOLBOX_LIBRARY_PATH} DIRECTORY)
-    set(KEPLERIANTOOLBOX_LIBRARY "keplerian_toolbox_static")  
+    set(KEPLERIANTOOLBOX_LIBRARY "keplerian_toolbox_static")
   endif(KEPLERIANTOOLBOX_INCLUDE_DIR AND KEPLERIANTOOLBOX_LIBRARY_PATH)
 
   include(FindPackageHandleStandardArgs)

@@ -15,8 +15,8 @@ else (SGP4_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       sgp4 sgp4deorbit
   )
@@ -30,8 +30,8 @@ else (SGP4_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       sgp4/libsgp4 sgp4/build sgp4deorbit/libsgp4 sgp4deorbit/build
     NO_DEFAULT_PATH

@@ -17,8 +17,8 @@ else (CATCH_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       C:
-      ${MYPROJ_PATH}
-      ${MYEXT_PATH}
+      ${PROJECT_PATH}
+      ${EXTERNAL_PATH}
     PATH_SUFFIXES
       Catch Catch/include Catch/src/catch/include
   )
