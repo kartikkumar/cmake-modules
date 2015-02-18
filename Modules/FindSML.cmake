@@ -1,4 +1,4 @@
-# Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
+# Copyright (c) 2015, K. Kumar (me@kartikkumar.com)
 # Distributed under the MIT License.
 # See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
 

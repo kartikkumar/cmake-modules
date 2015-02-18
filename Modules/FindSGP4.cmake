@@ -1,4 +1,4 @@
-# Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
+# Copyright (c) 2015, K. Kumar (me@kartikkumar.com)
 # All rights reserved.
 
 if (SGP4_INCLUDE_DIRS)
