@@ -1,4 +1,4 @@
-# Copyright (c) 2014, K. Kumar (me@kartikkumar.com)
+# Copyright (c) 2015, K. Kumar (me@kartikkumar.com)
 # Distributed under the MIT License.
 # See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
 
@@ -35,7 +35,7 @@ else(KEPLERIANTOOLBOX_INCLUDE_DIRS)
       ${PROJECT_PATH}
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      keplerian_toolbox/src keplerian_toolbox/build pykep/src/ pykep/build
+      keplerian_toolbox/src keplerian_toolbox/build keplerian_toolbox/build/src pykep/src/ pykep/build pykep/build/src
     NO_DEFAULT_PATH
   )
 
