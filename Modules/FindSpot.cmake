@@ -37,7 +37,7 @@ else (SPOT_INCLUDE_DIRS)
       ${PROJECT_PATH}
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      spot spot/build
+      spot spot/build spot/build/lib
     NO_DEFAULT_PATH
   )
 
