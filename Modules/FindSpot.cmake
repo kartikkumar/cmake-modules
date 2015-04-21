@@ -43,7 +43,7 @@ else (SPOT_INCLUDE_DIRS)
 
   if(SPOT_INCLUDE_DIR AND SPOT_LIB_PATH)
     set(SPOT_INCLUDE_DIRS
-      ${SPOT_INCLUDE_DIR}
+      ${SPOT_INCLUDE_DIR}/..
     )
     get_filename_component(SPOT_LIBRARY_DIR ${SPOT_LIB_PATH} DIRECTORY)
     set(SPOT_LIBRARY "spot")
