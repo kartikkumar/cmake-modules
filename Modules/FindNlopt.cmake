@@ -15,7 +15,7 @@ find_path ( NLOPT_INCLUDE_DIR
   NAMES
     nlopt.h
   DOC
-    "Nlopt include directory"
+    "NLOPT include directory"
 )
 
 # set NLOPT_INCLUDE_DIRS
@@ -45,7 +45,7 @@ endif ()
 # handle REQUIRED and QUIET options
 include ( FindPackageHandleStandardArgs )
 
-find_package_handle_standard_args ( Nlopt DEFAULT_MSG NLOPT_LIBRARY
+find_package_handle_standard_args ( NLOPT DEFAULT_MSG NLOPT_LIBRARY
   NLOPT_INCLUDE_DIR
   NLOPT_INCLUDE_DIRS
   NLOPT_LIBRARIES

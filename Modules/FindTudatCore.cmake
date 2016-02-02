@@ -1,6 +1,6 @@
- #    Copyright (c) 2010-2014, Delft University of Technology
+ #    Copyright (c) 2010-2016, Delft University of Technology
  #    All rights reserved.
- #    See LICENSE for license details 
+ #    See LICENSE for license details
  #    (http://tudat.tudelft.nl/projects/tudat/repository/tudatcore/entry/trunk/LICENSE).
  #
  #    Changelog
@@ -71,7 +71,7 @@ else (TUDAT_CORE_BASE_PATH)
       ${PROJECT_SOURCE_DIR}/..
       ${PROJECT_SOURCE_DIR}/../..
       ${PROJECT_SOURCE_DIR}/../../..
-      ${PROJECT_SOURCE_DIR}/../../../.. 
+      ${PROJECT_SOURCE_DIR}/../../../..
       ${CMAKE_INSTALL_PREFIX}/include
       PATH_SUFFIXES tudatCore/TudatCore
     )

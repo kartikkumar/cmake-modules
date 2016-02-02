@@ -1,6 +1,6 @@
 # Copyright (C) 2004-2009 The PaGMO development team,
 # Advanced Concepts Team (ACT), European Space Agency (ESA)
-# Copyright (c) 2015, K. Kumar (me@kartikkumar.com)
+# Copyright (c) 2014-2016, K. Kumar (me@kartikkumar.com)
 # Copyright (c) 2006, 2007 Montel Laurent, <montel@kde.org>
 # Copyright (c) 2008, 2009 Gael Guennebaud, <g.gael@free.fr>
 # Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmail.com>

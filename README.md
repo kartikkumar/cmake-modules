@@ -1,29 +1,44 @@
 CMake-modules
 ===
 
-A collection of `CMake` modules for a variety of C++ libraries.
+A collection of `CMake` modules for a variety of C++ libraries and features.
 
 Features
 ------
 
-This repository provides `CMake` modules for the following libraries:
+This repository provides `CMake` modules for the following:
 
-  - 
-
-Requirements
-------
-
-This project requires the following:
-
-  - [Git](http://git-scm.com)
-  - [CMake](http://www.cmake.org)  
+  - [Ceres](#)
+  - [CodeCoverage](#)
+  - [Assist](#)
+  - [astro "astro Github page"](https://github.com/astropnp/astro)
+  - [atom "atom Github page"](https://github.com/kartikkumar/atom)
+  - [Boost "Boost homepage"](https://boost.org)
+  - [CATCH "CATCH Github page"](https://github.com/philsquared/Catch)
+  - [cpp-project "cpp-project Github page"](https://github.com/kartikkumar/cpp-project)
+  - [Eigen "Eigen homepage"](#)
+  - [GLog](#)
+  - [GSL "GSL homepage"](#)
+  - [PyKEP "PyKEP Github page"](https://github.com/esa/pykep)
+  - [NLOPT "NLOPT homepage"](#)
+  - [PaGMO "PaGMO Github page"](https://github.com/esa/pagmo)
+  - [RapidJSON "RapidJSON Github page"](https://github.com/#)
+  - [SGP4 "SGP4 Github page"](https://github.com/kartikkumar/sgp4-deorbit)
+  - [sml "sml Github page"](https://github/astropnp/sml)
+  - [SQLite "SQLite homepage"](#)
+  - [SQLiteCpp "SQLiteCpp Github page"](https://github.com/#)
+  - [Tudat "Tudat Github page"](https://github.com/Tudat/#)
+  - [Tudat Core "Tudat Core Github page"](https://github.com/Tudat/#)
+  - [LibFindMacros](#)
 
 Installation
 ------
 
-Run the following commands to download this project.
+Run the following command to download this project using [Git](http://git-scm.com).
 
     git clone https://www.github.com/kartikkumar/cmake-modules cmake
+
+You can also grab the archive directly [here](#).
 
 Contributing
 ------------
@@ -49,7 +64,7 @@ The copyright holders are not liable for any damage(s) incurred due to improper 
 Contact
 ------
 
-Shoot an [email](mailto:me@kartikkumar.com?subject=cmake-modules) if you have any questions.
+Shoot me an [email](mailto:me@kartikkumar.com?subject=cmake-modules) if you have any questions.
 
 TODO
 ------

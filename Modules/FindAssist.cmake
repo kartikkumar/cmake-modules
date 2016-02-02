@@ -1,10 +1,10 @@
-# Copyright (c) 2010-2014, Delft University of Technology
+# Copyright (c) 2010-2016, Delft University of Technology
 # Copyright (c) 2010-2014, K. Kumar (me@kartikkumar.com)
 # All rights reserved.
 # See http://bit.ly/1jern3m for license details.
 
 macro(_assist_check_version)
-  message(STATUS "Checking for Assist in: " ${ASSIST_BASE_PATH})  
+  message(STATUS "Checking for Assist in: " ${ASSIST_BASE_PATH})
   file(READ "${ASSIST_BASE_PATH}/assistVersion.h" _assist_header)
 
   string(REGEX MATCH "define[ \t]+ASSIST_VERSION_MAJOR[ \t]+([0-9]+)" _assist_major_version_match "${_assist_header}")
@@ -27,7 +27,7 @@ macro(_assist_check_version)
 
   set(ASSIST_LIBRARIES "assist")
   set(ASSIST_INCLUDE_DIR ${ASSIST_BASE_PATH}/..)
-  set(ASSIST_LIBRARIES_DIR ${ASSIST_BASE_PATH}/../lib)  
+  set(ASSIST_LIBRARIES_DIR ${ASSIST_BASE_PATH}/../lib)
   link_directories(${ASSIST_LIBRARIES_DIR})
 endmacro(_assist_check_version)
 
@@ -64,7 +64,7 @@ endif(ASSIST_BASE_PATH)
 # References
 #   FindEigen3.cmake.
 #
-# This script tries to find the Assist library. This module supports requiring a minimum 
+# This script tries to find the Assist library. This module supports requiring a minimum
 # version, e.g. you can do version, e.g. you can do find_package(Assist 3.1.2) to require i
 # version 3.1.2 or newer of Assist.
 #

@@ -1,6 +1,6 @@
- #    Copyright (c) 2010-2014, Delft University of Technology
+ #    Copyright (c) 2010-2016, Delft University of Technology
  #    All rights reserved.
- #    See LICENSE for license details 
+ #    See LICENSE for license details
  #    (http://tudat.tudelft.nl/projects/tudat/repository/tudat/entry/trunk/LICENSE).
  #
  #    Changelog
@@ -29,7 +29,7 @@
  #      the 2-clause BSD license.
 
 macro(_tudat_check_version)
-  message(STATUS "Checking for Tudat in: " ${TUDAT_BASE_PATH})  
+  message(STATUS "Checking for Tudat in: " ${TUDAT_BASE_PATH})
   file(READ "${TUDAT_BASE_PATH}/tudatVersion.h" _tudat_header)
 
   string(REGEX MATCH "define[ \t]+TUDAT_VERSION_MAJOR[ \t]+([0-9]+)" _tudat_major_version_match "${_tudat_header}")
@@ -52,7 +52,7 @@ macro(_tudat_check_version)
 
   set(TUDAT_LIBRARIES "tudat")
   set(TUDAT_INCLUDE_DIR ${TUDAT_BASE_PATH}/..)
-  set(TUDAT_LIBRARIES_DIR ${TUDAT_BASE_PATH}/../lib)  
+  set(TUDAT_LIBRARIES_DIR ${TUDAT_BASE_PATH}/../lib)
   link_directories(${TUDAT_LIBRARIES_DIR})
 endmacro(_tudat_check_version)
 
