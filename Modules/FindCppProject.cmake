@@ -15,7 +15,7 @@ else(CPPPROJECT_INCLUDE_DIRS)
       /usr/local/include
       /opt/local/include
       /sw/include
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       CppProject include/CppProject

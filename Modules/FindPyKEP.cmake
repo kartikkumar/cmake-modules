@@ -16,7 +16,7 @@ else(PYKEP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       keplerian_toolbox keplerian_toolbox/src
@@ -34,7 +34,7 @@ else(PYKEP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       keplerian_toolbox/src keplerian_toolbox/build keplerian_toolbox/build/src

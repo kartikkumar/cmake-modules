@@ -19,7 +19,7 @@ else (SPOT_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       spot/include/Spot include/Spot Spot
@@ -34,7 +34,7 @@ else (SPOT_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       spot spot/build spot/build/lib

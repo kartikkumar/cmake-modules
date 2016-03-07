@@ -46,7 +46,7 @@ else(SQLITECPP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       SQLiteCpp SQLiteCpp/include/SQLiteCpp SQLiteCpp/src/sqlitecpp/include/SQLiteCpp
@@ -61,7 +61,7 @@ else(SQLITECPP_INCLUDE_DIRS)
       /opt/local/include
       /sw/include
       /usr/local
-      ${PROJECT_PATH}
+      ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
       SQLiteCpp SQLiteCpp/build SQLiteCpp/src/sqlitecpp/build
