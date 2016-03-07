@@ -1,18 +1,18 @@
 CMake-modules
 ===
 
-A collection of `CMake` modules for a variety of C++ libraries and features.
+A collection of CMake modules for a variety of C++ libraries and features.
 
 Features
 ------
 
-This repository provides `CMake` modules for the following:
+This repository provides CMake modules for the following:
 
   - [Ceres](#)
   - [CodeCoverage](#)
   - [Assist](#)
-  - [astro "astro Github page"](https://github.com/astropnp/astro)
-  - [atom "atom Github page"](https://github.com/kartikkumar/atom)
+  - [astro "astro Github page"](https://github.com/openastro/astro)
+  - [atom "atom Github page"](https://github.com/openastro/atom)
   - [Boost "Boost homepage"](https://boost.org)
   - [CATCH "CATCH Github page"](https://github.com/philsquared/Catch)
   - [cpp-project "cpp-project Github page"](https://github.com/kartikkumar/cpp-project)
@@ -23,8 +23,8 @@ This repository provides `CMake` modules for the following:
   - [NLOPT "NLOPT homepage"](#)
   - [PaGMO "PaGMO Github page"](https://github.com/esa/pagmo)
   - [RapidJSON "RapidJSON Github page"](https://github.com/#)
-  - [SGP4 "SGP4 Github page"](https://github.com/kartikkumar/sgp4-deorbit)
-  - [sml "sml Github page"](https://github/astropnp/sml)
+  - [SGP4 "SGP4 Github page"](https://github.com/openastro/sgp4-deorbit)
+  - [sml "sml Github page"](https://github/openastro/sml)
   - [SQLite "SQLite homepage"](#)
   - [SQLiteCpp "SQLiteCpp Github page"](https://github.com/#)
   - [Tudat "Tudat Github page"](https://github.com/Tudat/#)
@@ -36,7 +36,7 @@ Installation
 
 Run the following command to download this project using [Git](http://git-scm.com).
 
-    git clone https://www.github.com/kartikkumar/cmake-modules cmake
+    git clone https://www.github.com/openastro/cmake-modules cmake
 
 You can also grab the archive directly [here](#).
 
@@ -45,7 +45,7 @@ Contributing
 
 Once you've made your great commits:
 
-1. [Fork](https://github.com/kartikkumar/cmake-modules/fork) cmake-modules
+1. [Fork](https://github.com/openastro/cmake-modules/fork) cmake-modules
 2. Create a topic branch - `git checkout -b my_branch`
 3. Push to your branch - `git push origin my_branch`
 4. Create a [Pull Request](http://help.github.com/pull-requests/) from your branch
@@ -54,12 +54,12 @@ Once you've made your great commits:
 License
 ------
 
-See `LICENSE.md`.
+See LICENSE.md.
 
 Disclaimer
 ------
 
-The copyright holders are not liable for any damage(s) incurred due to improper use of `cmake-modules`.
+The copyright holders are not liable for any damage(s) incurred due to improper use of cmake-modules.
 
 Contact
 ------
