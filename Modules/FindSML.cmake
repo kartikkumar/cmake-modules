@@ -19,7 +19,7 @@ else(SML_INCLUDE_DIRS)
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      SML sml/include/SML SML/src/sml/include/SML
+      sml sml/include/sml sml/src/sml/include/sml
   )
 
   if(SML_INCLUDE_DIR)
@@ -29,7 +29,7 @@ else(SML_INCLUDE_DIRS)
   endif(SML_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(SML DEFAULT_MSG SML_INCLUDE_DIRS)
+  find_package_handle_standard_args(sml DEFAULT_MSG SML_INCLUDE_DIRS)
 
   # show the SML_INCLUDE_DIRS variables only in the advanced view
   mark_as_advanced(SML_INCLUDE_DIRS)
