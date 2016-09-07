@@ -19,7 +19,7 @@ else(ASTRO_INCLUDE_DIRS)
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      Astro astro/include/Astro Astro/src/astro/include/Astro
+      astro astro/include/astro astro/src/astro/include/astro
   )
 
   if(ASTRO_INCLUDE_DIR)
@@ -29,7 +29,7 @@ else(ASTRO_INCLUDE_DIRS)
   endif(ASTRO_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(Astro DEFAULT_MSG ASTRO_INCLUDE_DIRS)
+  find_package_handle_standard_args(astro DEFAULT_MSG ASTRO_INCLUDE_DIRS)
 
   # show the ASTRO_INCLUDE_DIRS variables only in the advanced view
   mark_as_advanced(ASTRO_INCLUDE_DIRS)
