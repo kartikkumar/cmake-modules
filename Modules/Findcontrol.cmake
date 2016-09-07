@@ -19,7 +19,7 @@ else(CONTROL_INCLUDE_DIRS)
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      Control control/include/Control Control/src/control/include/Control
+      control control/include/control control/src/control/include/control
   )
 
   if(CONTROL_INCLUDE_DIR)
@@ -29,7 +29,7 @@ else(CONTROL_INCLUDE_DIRS)
   endif(CONTROL_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(Control DEFAULT_MSG CONTROL_INCLUDE_DIRS)
+  find_package_handle_standard_args(control DEFAULT_MSG CONTROL_INCLUDE_DIRS)
 
   # show the CONTROL_INCLUDE_DIRS variables only in the advanced view
   mark_as_advanced(CONTROL_INCLUDE_DIRS)
