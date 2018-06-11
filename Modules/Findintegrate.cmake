@@ -18,7 +18,7 @@ else(INTEGRATE_INCLUDE_DIRS)
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      integrate include/integrate
+      integrate integrate/include/integrate integrate/src/integrate/include/integrate
   )
 
   if(INTEGRATE_INCLUDE_DIR)
