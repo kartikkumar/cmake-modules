@@ -20,7 +20,7 @@ else (CATCH_INCLUDE_DIRS)
       ${PROJECT_PATH}/..
       ${EXTERNAL_PATH}
     PATH_SUFFIXES
-      Catch Catch/single_include Catch/src/catch/single_include
+      Catch2 Catch2/single_include Catch2/single_include/catch2 Catch2/src/catch2/single_include
   )
 
   set(CATCH_INCLUDE_DIRS
