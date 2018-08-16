@@ -22,7 +22,7 @@ else (CATCH2_INCLUDE_DIRS)
   )
 
   set(CATCH2_INCLUDE_DIRS
-    ${CATCH2_INCLUDE_DIR}
+    ${CATCH2_INCLUDE_DIR}/..
   )
 
   include(FindPackageHandleStandardArgs)
