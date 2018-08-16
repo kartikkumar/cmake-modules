@@ -1,4 +1,3 @@
-
 # - Find libgmx
 # Find the native libgmx headers and libraries.
 #

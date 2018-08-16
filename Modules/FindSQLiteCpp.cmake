@@ -2,7 +2,7 @@
 # @ingroup SQLiteCpp
 # @brief   SQLiteCpp CMake module.
 #
-# Copyright (c) 2010-2014 Kartik Kumar (me@kartikkumar.com)
+# Copyright (c) 2016-2018, K. Kumar (me@kartikkumar.com)
 #
 # Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 # or copy at http://opensource.org/licenses/MIT)
