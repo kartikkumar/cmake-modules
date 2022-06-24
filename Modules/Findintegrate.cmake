@@ -1,6 +1,6 @@
 # Copyright (c) 2018 K. Kumar (me@kartikkumar.com)
 # Distributed under the MIT License.
-# See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
+# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
 if(INTEGRATE_INCLUDE_DIRS)
   # in cache already

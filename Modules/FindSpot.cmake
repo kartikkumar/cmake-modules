@@ -4,7 +4,7 @@
 # Copyright (c) 2014-2015 Juan Romero, University of Strathclyde
 # Copyright (c) 2016-2018, K. Kumar (me@kartikkumar.com)
 # Distributed under the MIT License.
-# See accompanying file LICENSE.md or copy at http://opensource.org/licenses/MIT
+# See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT
 
 if (SPOT_INCLUDE_DIRS)
   # in cache already
